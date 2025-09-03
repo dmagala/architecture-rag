@@ -169,3 +169,41 @@
 - Tatooine → Zephyria_Prime
 - Jedi Order → Quantum_Alliance
 - Lightsaber → Quantum_Blade
+
+## Задание 3: Создание векторного индекса
+
+### Модель эмбеддингов
+- **Название**: BAAI/bge-base-en-v1.5
+- **Размерность**: 768
+- **Тип**: Локальная модель (Sentence Transformers)
+
+### База знаний
+- **Источник**: Star Wars Wiki (Wookieepedia)
+- **Обработка**: Замена 50+ ключевых терминов на вымышленные
+- **Документов**: 36
+- **Формат**: Текстовые файлы (.txt)
+- **Размер**: ~2.5 MB исходных данных
+
+### Статистика индекса
+- **Чанков**: 7,751
+- **Размерность векторов**: 768
+- **Размер индекса**: 23.8 MB
+- **Размер метаданных**: 7.4 MB
+- **Общий размер**: ~30 MB
+
+### Время генерации
+- **Создание эмбеддингов**: ~3 минуты
+- **Построение FAISS индекса**: ~30 секунд
+- **Общее время**: 174.94 секунд
+
+### Примеры тестирования
+
+```
+Who is Orion_Light?
+
+(In flashback(s))
+From a Certain Point of View: Return of the Vexar_Alliance
+(Mentioned only)
+From a Certain Point of View: Return of the Vexar_Alliance
+...
+```

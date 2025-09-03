@@ -1,0 +1,7 @@
+{
+  "total_documents": 36,
+  "total_chunks": 7751,
+  "embedding_dimension": 768,
+  "index_size": 7751,
+  "processing_time": 174.93872094154358
+}
