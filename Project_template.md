@@ -207,3 +207,53 @@ From a Certain Point of View: Return of the Vexar_Alliance
 From a Certain Point of View: Return of the Vexar_Alliance
 ...
 ```
+
+## Задание 4: Реализация RAG-бота с техниками промптинга
+
+#### Созданные компоненты:
+- **RAGBot** (`src/rag_bot.py`) - основной класс бота с векторным поиском
+- **FastAPI** (`src/api.py`) - REST API с документацией и мониторингом
+- **Система промптинга** - Few-shot и Chain-of-Thought техники
+- **Безопасность** - фильтрация вредоносного контента
+- **Конфигурация** (`config.json`) - настройки системы
+
+#### Техники промптинга:
+**Few-shot Prompting** - примеры вопросов и ответов для улучшения качества  
+**Chain-of-Thought** - пошаговое рассуждение для сложных запросов  
+**Контекстные промпты** - адаптация под тип запроса  
+
+#### Режимы работы:
+- **Интерактивная демонстрация** - чат с ботом
+- **API сервер** - REST интерфейс на порту 8000
+
+#### Примеры успешных диалогов:
+
+**Диалог 1: Технологический объект**
+**Вопрос:** What is Vexar_Matrix?
+**Ответ:** Vexar_Matrix is a moon-sized battle station designed to fire a planet-destroying superlaser. It was built by the Galactic Vortex_Assembly and represents the ultimate weapon of destruction in the galaxy.
+
+**Диалог 2: Персонаж**
+**Вопрос:** Who is Orion_Light?
+**Ответ:** Orion_Light is a legendary hero known for his connection to Luminar_Energy. He is considered one of the most powerful users of Luminar_Energy in the galaxy and plays a crucial role in maintaining balance.
+
+**Диалог 3: Концепция**
+**Вопрос:** Tell me about Luminar_Energy
+**Ответ:** Luminar_Energy is the mystical energy that binds the universe together. It flows through all living things and can be harnessed by those with the proper training and connection. It's the foundation of the Vexar_Alliance's power.
+
+**Диалог 4: Географический объект**
+**Вопрос:** What is Nexara_Epsilon?
+**Ответ:** Nexara_Epsilon is a desert planet located in the Outer Rim. It's known for its harsh climate, twin suns, and being the homeworld of many important characters in the galaxy. The planet has a remote settlement within vast canyons.
+
+**Диалог 5: Организация**
+**Вопрос:** Who are the Vexar_Alliance?
+**Ответ:** The Vexar_Alliance is an ancient order of peacekeepers who use Luminar_Energy to maintain balance in the galaxy. They are known for their wisdom, combat skills, and dedication to justice. They serve as guardians of peace and order.
+
+#### Примеры случаев "Я не знаю":
+
+**Случай 1: Запрос вне области знаний**
+**Вопрос:** What is the capital of Mars?
+**Ответ:** Извините, я не нашел релевантной информации в базе знаний для ответа на ваш вопрос. Моя база знаний содержит информацию о корпоративных данных QuantumForge Software, но не включает информацию о планете Марс.
+
+**Случай 2: Запрос не связанный с темой**
+**Вопрос:** How to cook pasta?
+**Ответ:** Извините, я не могу помочь с кулинарными рецептами. Моя база знаний специализируется на корпоративной информации QuantumForge Software и не содержит информацию о приготовлении пищи.

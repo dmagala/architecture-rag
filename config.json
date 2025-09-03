@@ -1,0 +1,33 @@
+{
+  "embedding_model": "BAAI/bge-base-en-v1.5",
+  "llm_model": "gpt-3.5-turbo",
+  "max_tokens": 1000,
+  "temperature": 0.7,
+  "search_k": 5,
+  "similarity_threshold": 0.3,
+  "max_context_length": 4000,
+  "indices_path": "indices",
+  "api": {
+    "host": "0.0.0.0",
+    "port": 8000,
+    "debug": true
+  },
+  "security": {
+    "max_query_length": 500,
+    "rate_limit_per_minute": 60,
+    "blocked_patterns": [
+      "ignore previous instructions",
+      "forget everything",
+      "you are now",
+      "pretend to be",
+      "act as if",
+      "system prompt",
+      "jailbreak"
+    ]
+  },
+  "prompts": {
+    "system_message": "Ты - эксперт по корпоративной базе знаний QuantumForge Software. Отвечай точно и профессионально, основываясь только на предоставленной информации.",
+    "few_shot_enabled": true,
+    "chain_of_thought_enabled": true
+  }
+}
